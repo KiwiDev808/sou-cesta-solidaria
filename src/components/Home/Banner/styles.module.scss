@@ -1,5 +1,11 @@
 .bannerContainer {
   display: flex;
   background: red;
-  height: 500px;
+  height: 450px;
+  object-fit: contain;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
