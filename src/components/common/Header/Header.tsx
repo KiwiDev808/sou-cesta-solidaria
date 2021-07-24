@@ -1,10 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
+import { useRouter } from 'next/dist/client/router'
 import Link from 'next/link'
 import React from 'react'
-import logo from '../../../public/images/logo.png'
+import logo from '../../../../public/images/logo.png'
 import styles from './styles.module.scss'
 
 const Header = () => {
+  const router = useRouter()
   return (
     <header className={styles.headerContainer}>
       <div className={styles.logo}>
@@ -28,7 +30,7 @@ const Header = () => {
           <Link href="/">
             <a>Contato</a>
           </Link>
-          <Link href="/voluntario">
+          <Link href="/voluntario" passHref>
             <button>Seja Voluntario</button>
           </Link>
         </nav>

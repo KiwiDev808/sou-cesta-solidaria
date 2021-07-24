@@ -1,9 +1,9 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import Layout from '../../components/common/Layout/Layout'
 
 const Voluntario = () => {
   return (
-    <Layout title="Sou Cesta Solidária - Voluntário">
+    <Layout title="Voluntário - Sou Cesta Solidária">
       <div>Voluntario</div>
     </Layout>
   )

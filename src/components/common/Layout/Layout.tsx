@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import React from 'react'
-import { Footer } from './Footer/Footer'
-import Header from './Header/Header'
+import { Footer } from '../Footer/Footer'
+import Header from '../Header/Header'
+import styles from './styles.module.scss'
 
 const Layout = ({ children, title }) => (
   <>
@@ -17,9 +18,11 @@ const Layout = ({ children, title }) => (
         crossOrigin="anonymous"
       ></link>
     </Head>
-    <Header />
-    {children}
-    <Footer />
+    <div className={styles.layoutContainer}>
+      <Header />
+      {children}
+      <Footer />
+    </div>
   </>
 )
 

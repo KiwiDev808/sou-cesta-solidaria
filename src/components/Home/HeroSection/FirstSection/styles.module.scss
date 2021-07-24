@@ -1,0 +1,27 @@
+.sectionContainer {
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 1.75rem;
+  flex-direction: column;
+  align-items: center;
+
+  .cardsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .firstHeading {
+    color: green;
+    margin: 0;
+    padding: 0;
+    padding-top: 1.5rem;
+  }
+  .secondHeading {
+    color: orange;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+  }
+}
