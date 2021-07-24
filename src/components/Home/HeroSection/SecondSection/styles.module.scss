@@ -1,6 +1,38 @@
 .sectionContainer {
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: darken;
+
+  .firstHeading {
+    color: white;
+    text-align: center;
+  }
+  .secondHeading {
+    color: orange;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+    align-self: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+    li {
+      text-align: left;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: white;
+    }
+  }
 }
