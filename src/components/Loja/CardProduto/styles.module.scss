@@ -1,0 +1,77 @@
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 320px;
+  max-width: 350px;
+  padding-bottom: 1rem;
+  gap: 1rem;
+
+  box-shadow: 3px 4px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid gray;
+  border-radius: 12px;
+
+  text-align: center;
+  color: var(--card-text);
+  overflow: hidden;
+
+  .imageWrapper {
+    object-fit: contain;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  * {
+    margin: 0;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    h3 {
+      font-size: 1.75rem;
+      font-weight: 500;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+  }
+
+  .price {
+    p {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: var(--text);
+      margin-bottom: -5px;
+    }
+    h4 {
+      font-size: 1.125rem;
+      font-weight: 300;
+      span {
+        font-size: 1.75rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .buyButton {
+    border: none;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    border: 1px solid green;
+    color: green;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    align-self: center;
+
+    &:hover {
+      background: green;
+      color: white;
+    }
+  }
+}
