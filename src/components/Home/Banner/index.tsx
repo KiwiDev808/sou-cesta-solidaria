@@ -6,7 +6,9 @@ import styles from './styles.module.scss'
 export const Banner = () => {
   return (
     <div className={styles.bannerContainer}>
-      <img src={banner.src} alt="banner of site" />
+      <div>
+        <img src={banner.src} alt="banner of site" />
+      </div>
     </div>
   )
 }
