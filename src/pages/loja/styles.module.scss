@@ -1,5 +1,6 @@
 .lojaContainer {
   margin: 0 auto;
+  padding: 2rem;
   max-width: 1420px;
   display: flex;
   flex-direction: column;
@@ -11,6 +12,7 @@
   }
   .listaProdutos {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 4rem;
   }

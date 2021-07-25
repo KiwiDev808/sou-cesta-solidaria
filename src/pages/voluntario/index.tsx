@@ -1,12 +1,11 @@
-import React from 'react';
-import { useState } from 'react';
-import Layout from '../../components/common/Layout/Layout';
-import styles from "./styles.module.scss";
-
-import ModalVoluntario from './ModalVoluntario/ModalVoluntario';
+/* eslint-disable @next/next/no-img-element */
+import React, { useState } from 'react'
+import Layout from '../../components/common/Layout/Layout'
+import ModalVoluntario from './ModalVoluntario/ModalVoluntario'
+import styles from './styles.module.scss'
 
 const Voluntario = () => {
-  const [isModalVisible, SetIsModalVisible] = useState(false);
+  const [isModalVisible, SetIsModalVisible] = useState(false)
   return (
     <Layout title="Voluntário - Sou Cesta Solidária">
       <div className={styles.voluntario}>
@@ -120,7 +119,7 @@ const Voluntario = () => {
         </button>
       </form>
     </Layout>
-  );
+  )
 }
 
 export default Voluntario

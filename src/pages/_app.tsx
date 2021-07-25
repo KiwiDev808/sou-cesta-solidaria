@@ -1,15 +1,29 @@
+import CssBaseline from '@material-ui/core/CssBaseline'
+import { ThemeProvider } from '@material-ui/core/styles'
 import Head from 'next/head'
+import React from 'react'
 import '../styles/globals.scss'
+import theme from '../styles/theme'
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp(props) {
+  const { Component, pageProps } = props
+
+  React.useEffect(() => {
+    const jssStyles = document.querySelector('#jss-server-side')
+    if (jssStyles) {
+      jssStyles.parentElement.removeChild(jssStyles)
+    }
+  }, [])
+
   return (
-    <>
+    <React.Fragment>
       <Head>
         <link rel="shortcut icon" href="favicon.png" />
       </Head>
-      <Component {...pageProps} />
-    </>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </React.Fragment>
   )
 }
-
-export default MyApp
