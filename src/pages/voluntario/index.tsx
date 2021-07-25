@@ -29,11 +29,15 @@ const Voluntario = () => {
           >
             Confira a Lei do Voluntariado
           </button>
-          {isModalVisible ? <ModalVoluntario /> : null}
+          {isModalVisible ? (
+            <ModalVoluntario onClose={() => SetIsModalVisible(false)}>
+              <h2>Lei do voluntariado</h2>
+            </ModalVoluntario>
+          ) : null}
         </div>
       </div>
       <form className={styles.cadastro}>
-        <h2>Cadastrar-se como voluntario e ajude a mudar vidas!</h2>
+        <h2>Cadastrar-se como voluntário e ajude a mudar vidas!</h2>
         <label htmlFor="name">Nome:</label>
         <input id="name" type="text" />
 
