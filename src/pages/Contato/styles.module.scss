@@ -1,0 +1,50 @@
+.title {
+    color: #4b362d;
+    font-size: 56px;
+    margin-left:50px;
+}
+.contato{
+    display: flex;
+    width:100%;
+}
+.infoContato{
+    width:50%;
+    text-align: center;
+
+}
+.redeSocial{
+    background-color: chocolate;
+}
+.formContato{
+    display: flex;
+    flex-direction: column;
+
+    
+}
+.formContato label {
+    margin-top: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--nav-link);
+}
+.formContato input{
+    width:250%;
+    border: none;
+    border-bottom: 2px solid #4b362d;
+    height: 30px;
+}
+.btnEnviar {
+    background-color: #38b24f;
+    margin: 20px auto;
+    padding: 8px 12px;
+    border-radius: 25px;
+    width: 100px;
+    border: none;
+   
+}
+.btnEnviar:hover {
+    background-color: #2a7738;
+    color: white;
+}
+
+

@@ -27,7 +27,7 @@ const Header = () => {
           <Link href="/sobre">
             <a>Sobre</a>
           </Link>
-          <Link href="/">
+          <Link href="/Contato">
             <a>Contato</a>
           </Link>
           <Link href="/voluntario" passHref>
