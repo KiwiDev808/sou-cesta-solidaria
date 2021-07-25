@@ -25,9 +25,12 @@ const Header = () => {
             <a>Loja</a>
           </Link>
           <Link href="/sobre">
-            <a>Sobre</a>
+            <a>Sobre Nós</a>
           </Link>
-          <Link href="/Contato">
+          <Link href="/perguntas-frequentes">
+            <a>Perguntas Frequentes</a>
+          </Link>
+          <Link href="/contato">
             <a>Contato</a>
           </Link>
           <Link href="/voluntario" passHref>
