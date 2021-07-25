@@ -1,0 +1,25 @@
+.sobreContainer {
+  margin: 0 auto;
+  max-width: 1020px;
+  font-size: 1.125rem;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    gap: 1rem;
+    font-weight: 300;
+  }
+
+  .firstSection {
+    h2 {
+      text-transform: uppercase;
+    }
+  }
+}
