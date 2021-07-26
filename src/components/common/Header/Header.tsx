@@ -19,9 +19,11 @@ const Header = () => {
       <div className={styles.navigationArea}>
         <div className={styles.userArea}>
           <Button onClick={() => setModal(true)}>Doe agora</Button>
-          <Link href="/voluntario" passHref>
-            <Button>Seja Voluntario</Button>
-          </Link>
+          <Hidden smDown>
+            <Link href="/voluntario" passHref>
+              <Button>Seja Voluntario</Button>
+            </Link>
+          </Hidden>
         </div>
         <Hidden smDown>
           <nav className={styles.navLinks}>
@@ -51,7 +53,9 @@ const Header = () => {
       </div>
 
       <ModalAux open={modal} handleClose={() => setModal(false)}>
-        <p>Teste</p>
+        <div>
+          <h3>Doação</h3>
+        </div>
       </ModalAux>
     </header>
   )

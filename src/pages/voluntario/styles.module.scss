@@ -1,61 +1,61 @@
-.infoVoluntario{
-     width: 70%;
-    margin: auto;
+.voluntariosWrapper {
+  padding: 1rem 0rem 2rem;
 
-}
-.formVoluntario{
-    display:flex;
+  .infoVoluntario {
+    width: 70%;
+    margin: auto;
+  }
+
+  .formInputs {
+    align-self: center;
+    display: flex;
+    max-width: 700px;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+    button {
+      padding: 1rem 4rem;
+    }
+  }
+  .formVoluntario {
+    display: flex;
     flex-direction: column;
     width: 70%;
     margin: auto;
-}
-.buttonVoluntario{
-        box-shadow: none;
-        background: none;
-        cursor: pointer;
-        border: 3px solid #c1d13d;
-        font-size: 1.125rem;
-        font-weight: 600;
-        border-radius: 16px;
-        padding: 0.5rem 0.5rem;
+  }
+  .buttonVoluntario {
+    box-shadow: none;
+    background: none;
+    cursor: pointer;
+    border: 3px solid #c1d13d;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: 16px;
+    padding: 0.5rem 0.5rem;
 
-        &:hover {
-          color: #293800;
-          background: #c1d13d;
-        }
-      }
-.cadastro {
-    display:flex;
+    &:hover {
+      color: #293800;
+      background: #c1d13d;
+    }
+  }
+  .cadastro {
+    display: flex;
     flex-direction: column;
     width: 70%;
     margin: auto;
-}
-.cadastro label {
+  }
+  .cadastro label {
     margin-top: 25px;
     font-size: 16px;
     font-weight: 600;
     color: var(--nav-link);
-}
-.cadastro input {
+  }
+  .cadastro input {
     margin-bottom: 2px;
     border: 1px solid var(--nav-link);
     height: 30px;
-}
-#habilidades{
+  }
+  #habilidades {
     margin-top: 20px;
+  }
 }
-.btnEnviar {
-    background-color: #38b24f;
-    margin: 20px auto;
-    padding: 8px 12px;
-    border-radius: 25px;
-    width: 100px;
-    border: none;
-    
-    &:hover {
-    background-color: #2a7738;
-    color: white;
-}
-   
-}
-

@@ -8,7 +8,7 @@ import styles from './styles.module.scss'
 
 const Contato = () => {
   return (
-    <Layout title="Loja - Sou Cesta Solidária">
+    <Layout title="Contato - Sou Cesta Solidária">
       <div className={styles.contatoContainer}>
         <h2 className={styles.title}>fale conosco</h2>
 
@@ -54,7 +54,13 @@ const Contato = () => {
             </div>
           </div>
 
-          <form className={styles.formContato}>
+          <form
+            className={styles.formContato}
+            action="mailto:soucestasolidaria@gmail.com"
+            method="POST"
+            encType="multipart/form-data"
+            name="Formulário de Contato"
+          >
             <Input label="Seu Nome" />
 
             <Input label="Seu e-mail:" type="email" />

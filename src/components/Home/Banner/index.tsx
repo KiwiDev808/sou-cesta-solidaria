@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import imagem1 from '../../../../public/images/Banner/imagem1.png'
 import imagem2 from '../../../../public/images/Banner/imagem2.png'
 import imagem3 from '../../../../public/images/Banner/imagem3.png'
@@ -8,6 +8,13 @@ import styles from './styles.module.scss'
 const images = [imagem1.src, imagem2.src, imagem3.src]
 export const Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const timeoutRef = React.useRef(null)
+
+  const resetTimeout = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current)
+    }
+  }
 
   const previousSlide = () => {
     if (currentSlide === 0) {
@@ -24,6 +31,21 @@ export const Banner = () => {
       setCurrentSlide(currentSlide + 1)
     }
   }
+
+  useEffect(() => {
+    resetTimeout()
+    timeoutRef.current = setTimeout(
+      () =>
+        setCurrentSlide((prevIndex) =>
+          prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        ),
+      2500
+    )
+
+    return () => {
+      resetTimeout()
+    }
+  })
 
   return (
     <div className={styles.bannerContainer}>
@@ -45,7 +67,11 @@ export const Banner = () => {
       <div className={styles.slideBadges}>
         {images.map((img, index) => {
           return (
-            <span key={index} onClick={() => setCurrentSlide(index)}></span>
+            <span
+              key={index}
+              className={index === currentSlide ? styles.active : ''}
+              onClick={() => setCurrentSlide(index)}
+            ></span>
           )
         })}
       </div>

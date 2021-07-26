@@ -17,8 +17,8 @@ export default function Select(props: any) {
       </MenuItem>
       {options.map((option: any) => {
         return (
-          <MenuItem key={option.id} value={option.id}>
-            {option.name}
+          <MenuItem key={option.value} value={option.value}>
+            {option.label}
           </MenuItem>
         )
       })}
