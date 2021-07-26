@@ -6,6 +6,7 @@ import styles from "./styles.module.scss";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
+import Input from "../../components/common/Control/Input";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const Voluntario = () => { 
 
-  const currencies = [
+  const estado = [
     { value: "AC", label: "Acre" },
     { value: "AL", label: "Alagoas" },
     { value: "AP", label: "Amapá" },
@@ -49,11 +50,26 @@ const Voluntario = () => {
     { value: "SE", label: "Sergipe" },
     { value: "TO", label: "Tocantins" },
   ];
-
+const habilidades = [
+  { value: "Montagem de cestas", label: "Montagem de cestas" },
+  { value: "Comunicação & Marketing", label: "Comunicação & Marketing" },
+  { value: "Transporte/Logística", label: "Transporte/Logística" },
+  { value: "Financeiro", label: "Financeiro" },
+  { value: "Design/Mídias Sociais", label: "Design/Mídias Sociais" },
+  { value: "Fotografia", label: "Fotografia" },
+  { value: "Recrutamento e Seleção/T&D", label: "Recrutamento e Seleção/T&D" },
+  { value: "Jurídico", label: "Jurídico" },
+  { value: "Parcerias", label: "Parcerias" },
+  { value: "TI", label: "TI" },
+  {
+    value: "Outros",
+    label: "Outros: Especifique na mensagem!",
+  },
+];
 
   const [isModalVisible, SetIsModalVisible] = useState(false);
   const classes = useStyles();
-  const [currency, setCurrency] = React.useState("SP");
+  const [currency, setCurrency] = React.useState("");
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCurrency(event.target.value);
@@ -102,16 +118,24 @@ const Voluntario = () => {
         <TextField id="standard-basic" label="Nome:" type="text" />
         <TextField id="standard-basic" label="E-mail:" type="email" />
         <TextField id="standard-basic" label="Tel/WhatsApp:" type="tel" />
-        <TextField id="outlined-basic" type="date" />
+        <label htmlFor="dataNascimento" className={styles.dataNascimento}>
+          Data de Nascimento:
+        </label>
+        <input
+          id="dataNascimento"
+          type="date"
+          className={styles.dataNascimentoInput}
+        />
+        {/* <TextField id="outlined-basic" type="date" /> */}
         <TextField id="standard-basic" label="Cidade:" type="text" />
         <TextField
           id="standard-select-currency"
           select
-          label="Select"
+          label="Estado:"
           value={currency}
           onChange={handleChange}
         >
-          {currencies.map((option) => (
+          {estado.map((option) => (
             <MenuItem key={option.value} value={option.value}>
               {option.label}
             </MenuItem>
@@ -121,9 +145,31 @@ const Voluntario = () => {
         <TextField id="standard-basic" label="Cep:" type="text" />
         <TextField id="standard-basic" label="Endereço:" type="text" />
         <TextField id="standard-basic" label="Numero:" type="text" />
-        
-      
-        <button>Enviar</button>
+        <TextField
+          id="standard-select-currency"
+          select
+          label="Indique a área principal onde gostaria de atuar:"
+          value={currency}
+          onChange={handleChange}
+        >
+          {habilidades.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+        <TextField
+          id="outlined-basic"
+          label="Mensagem:"
+          type="textarea"
+          multiline
+          minRows={6}
+        />
+        {/* <Input label="Mensagem:" type="text" multiline minRows={6} /> */}
+
+        <button type="submit" className={styles.btnEnviar}>
+          Cadastrar
+        </button>
       </form>
     </Layout>
   );

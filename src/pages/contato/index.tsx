@@ -55,7 +55,7 @@ const Contato = () => {
           </div>
 
           <form className={styles.formContato}>
-            <Input label="Seu Nome" />
+            <Input label="Seu Nome" type="text" />
 
             <Input label="Seu e-mail:" type="email" />
 
