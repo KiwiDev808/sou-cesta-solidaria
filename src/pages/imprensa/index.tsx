@@ -6,7 +6,7 @@ const Imprensa = () => {
   return (
     <Layout title="Imprensa - Sou Cesta Solidária">
       <div className={styles.imprensaContainer}>
-        <h2>Imprensa</h2>
+        <h2>imprensa</h2>
       </div>
     </Layout>
   )

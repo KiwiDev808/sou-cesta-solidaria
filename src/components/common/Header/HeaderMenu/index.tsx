@@ -1,10 +1,10 @@
 import { IconButton, Menu, MenuItem } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 
 export const HeaderMenu = () => {
-  const [anchorEl, setAnchorEl] = React.useState(null)
+  const [anchorEl, setAnchorEl] = useState(null)
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget)
@@ -24,7 +24,6 @@ export const HeaderMenu = () => {
         <MenuIcon />
       </IconButton>
       <Menu
-        id="simple-menu"
         anchorEl={anchorEl}
         keepMounted
         open={Boolean(anchorEl)}

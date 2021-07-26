@@ -1,3 +1,11 @@
 .imprensaContainer {
+  margin: 0 auto;
+  padding: 1rem 1rem 2rem;
+  width: 100%;
+  max-width: 1020px;
   display: flex;
+
+  & > h2 {
+    font-size: 2rem;
+  }
 }
