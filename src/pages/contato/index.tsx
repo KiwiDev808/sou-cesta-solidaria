@@ -14,22 +14,44 @@ const Contato = () => {
 
         <div className={styles.contato}>
           <div className={styles.infoContato}>
-            <h4> Redes sociais </h4>
-            <a href="#" target="_blank">
-              <InstagramIcon />
-            </a>
-            <a href="#" target="_blank">
-              <FacebookIcon />
-            </a>
-            <h4> Endereço </h4>
-            <p>
-              Rua João Francisco de Mello, 131 - Vila Nova Alba, São Paulo - SP,
-              05358-110
-            </p>
-            <h4> Contatos </h4>
-            <p>Email: soucestasolidaria@gmail.com</p>
-            <p>Redes sociais: @soucestasolidaria</p>
-            <p>Whatsapp: (11) 93710-1020</p>
+            <div className={styles.socialMedia}>
+              <h4> Redes sociais </h4>
+              <div>
+                <a
+                  href="https://instagram.com/soucestasolidaria"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <InstagramIcon />
+                </a>
+                <a
+                  href="https://facebook.com/soucestasolidaria"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FacebookIcon />
+                </a>
+              </div>
+            </div>
+            <div className={styles.address}>
+              <h4> Endereço </h4>
+              <p>
+                Rua João Francisco de Mello, 131 - Vila Nova Alba, São Paulo -
+                SP, 05358-110
+              </p>
+            </div>
+            <div className={styles.contact}>
+              <h4> Contatos </h4>
+              <p>
+                <span>Email:</span> soucestasolidaria@gmail.com
+              </p>
+              <p>
+                <span>Redes sociais:</span> @soucestasolidaria
+              </p>
+              <p>
+                <span>Whatsapp:</span> (11) 93710-1020
+              </p>
+            </div>
           </div>
 
           <form className={styles.formContato}>

@@ -1,17 +1,17 @@
-import { IconButton, Menu, MenuItem } from '@material-ui/core'
+import { Drawer, IconButton, MenuItem } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import Link from 'next/link'
 import React, { useState } from 'react'
 
 export const HeaderMenu = () => {
-  const [anchorEl, setAnchorEl] = useState(null)
+  const [anchorEl, setAnchorEl] = useState(false)
 
   const handleClick = (event) => {
-    setAnchorEl(event.currentTarget)
+    setAnchorEl(true)
   }
 
   const handleClose = () => {
-    setAnchorEl(null)
+    setAnchorEl(false)
   }
   return (
     <>
@@ -23,12 +23,7 @@ export const HeaderMenu = () => {
       >
         <MenuIcon />
       </IconButton>
-      <Menu
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
+      <Drawer anchor="left" open={anchorEl} onClose={handleClose}>
         <Link href="/" passHref>
           <MenuItem onClick={handleClose}>Inicio </MenuItem>
         </Link>
@@ -51,7 +46,7 @@ export const HeaderMenu = () => {
         <Link href="/contato" passHref>
           <MenuItem onClick={handleClose}>Contato</MenuItem>
         </Link>
-      </Menu>
+      </Drawer>
     </>
   )
 }
