@@ -1,6 +1,12 @@
+.infoVoluntario{
+     width: 70%;
+    margin: auto;
 
-.voluntario{
-      width: 70%;
+}
+.formVoluntario{
+    display:flex;
+    flex-direction: column;
+    width: 70%;
     margin: auto;
 }
 .buttonVoluntario{
@@ -19,7 +25,7 @@
         }
       }
 .cadastro {
-    display: flex;
+    display:flex;
     flex-direction: column;
     width: 70%;
     margin: auto;
@@ -32,16 +38,8 @@
 }
 .cadastro input {
     margin-bottom: 2px;
-    border: none;
-    border-bottom: 2px solid #4b362d;
+    border: 1px solid var(--nav-link);
     height: 30px;
-}
-.cadline{
-    display: flex;
-    justify-content: space-between;
-}
-.cadline input, .cadline select, .cadhab {
-    margin-top: 12px;
 }
 #habilidades{
     margin-top: 20px;
