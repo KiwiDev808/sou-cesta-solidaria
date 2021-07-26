@@ -38,11 +38,11 @@ const produtos = [
   },
 ]
 
-const Loja = () => {
+const Compras = () => {
   return (
-    <Layout title="Loja - Sou Cesta Solidária">
+    <Layout title="Compras - Sou Cesta Solidária">
       <div className={styles.lojaContainer}>
-        <h2>Produtos</h2>
+        <h2>Assinaturas</h2>
         <div className={styles.listaProdutos}>
           {produtos.map((produto, index) => {
             return (
@@ -62,4 +62,4 @@ const Loja = () => {
   )
 }
 
-export default Loja
+export default Compras

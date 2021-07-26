@@ -27,8 +27,8 @@ export const HeaderMenu = () => {
         <Link href="/" passHref>
           <MenuItem onClick={handleClose}>Inicio </MenuItem>
         </Link>
-        <Link href="/loja" passHref>
-          <MenuItem onClick={handleClose}>Loja</MenuItem>
+        <Link href="/compras" passHref>
+          <MenuItem onClick={handleClose}>Compras</MenuItem>
         </Link>
 
         <Link href="/sobre" passHref>
