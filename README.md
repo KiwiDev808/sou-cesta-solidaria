@@ -1,8 +1,8 @@
-## 💻 Projeto
+## 💻 Sobre
 
-O Github User Search é uma aplicação desenvolvida para o processo seletivo da Compasso. Nela podemos procurar por usuários do Github e a aplicação nos desenvolverá suas informações. O projeto foi construído ao longo de 2 dias, usando React e fazendo o fetch da API do Github para trazer os dados do usuário.
+Esse repositório contém o código desenvolvido durante o evento HACK4GOOD da Provi, em que a equipe foi reponsável por fazer o redesign do site da ONG Sou Cesta Solidária, uma ONG que busca promover a alimentação saudável criando um sistema sustentável e auxiliar pessoas vuneráveis.
 
-## [Visite](https://desafio-compasso-uol-p251t6i1r-kiwidev808.vercel.app)
+## [Visite](https://sou-cesta-solidaria.vercel.app/)
 
 ## ⛏ Tecnologias
 
