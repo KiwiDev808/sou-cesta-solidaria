@@ -16,7 +16,7 @@ const Accordion = (props) => {
         aria-controls="panel1a-content"
         id="panel1a-header"
       >
-        <Typography>{title}</Typography>
+        <Typography variant="h6">{title}</Typography>
       </AccordionSummary>
       <AccordionDetails>
         <Typography>{description}</Typography>
