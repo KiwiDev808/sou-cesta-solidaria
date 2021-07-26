@@ -1,61 +1,75 @@
-.voluntariosWrapper {
-  padding: 1rem 0rem 2rem;
-
-  .infoVoluntario {
-    width: 70%;
-    margin: auto;
+.infoVoluntario {
+  width: 70%;
+  margin: auto;
+}
+.buttonVoluntario {
+  box-shadow: none;
+  background: none;
+  cursor: pointer;
+  border: 3px solid #c1d13d;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 16px;
+  padding: 0.5rem 0.5rem;
+  &:hover {
+    color: #293800;
+    background: #c1d13d;
   }
-
-  .formInputs {
-    align-self: center;
-    display: flex;
-    max-width: 700px;
-    width: 100%;
-    flex-direction: column;
-    gap: 0.5rem;
-    button {
-      padding: 1rem 4rem;
-    }
+}
+.formVoluntario {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+  label {
+    color: black;
   }
-  .formVoluntario {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    margin: auto;
+  .dataNascimento {
+    margin-top: 12px;
+    font-size: 12px;
   }
-  .buttonVoluntario {
-    box-shadow: none;
-    background: none;
-    cursor: pointer;
-    border: 3px solid #c1d13d;
-    font-size: 1.125rem;
-    font-weight: 600;
-    border-radius: 16px;
-    padding: 0.5rem 0.5rem;
+  .dataNascimentoInput {
+    color: rgb(124, 124, 124);
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid rgb(124, 124, 124);
 
     &:hover {
-      color: #293800;
-      background: #c1d13d;
+      border-bottom: 2px solid black;
     }
   }
-  .cadastro {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    margin: auto;
-  }
-  .cadastro label {
-    margin-top: 25px;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--nav-link);
-  }
-  .cadastro input {
-    margin-bottom: 2px;
-    border: 1px solid var(--nav-link);
-    height: 30px;
-  }
-  #habilidades {
-    margin-top: 20px;
+}
+
+/* .cadastro {
+  display:flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+}
+.cadastro label {
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--nav-link);
+}
+.cadastro input {
+  margin-bottom: 2px;
+  border: 1px solid var(--nav-link);
+  height: 30px;
+}
+#habilidades{
+  margin-top: 20px; 
+}*/
+.btnEnviar {
+  background-color: #38b24f;
+  margin: 50px auto;
+  padding: 8px 12px;
+  border-radius: 25px;
+  width: 100px;
+  border: none;
+
+  &:hover {
+    background-color: #2a7738;
+    color: white;
   }
 }
