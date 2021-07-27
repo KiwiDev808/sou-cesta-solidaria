@@ -5,8 +5,8 @@ backend:
   base_url: https://sou-cesta-solidaria-teste.vercel.app
   auth_endpoint: api/auth
 
-media_folder: public/img
-public_folder: img
+media_folder: public/uploads
+public_folder: /uploads
 collections:
   - name: 'pages'
     label: 'Pages'
@@ -24,3 +24,16 @@ collections:
             fields:
               - { label: 'Name', name: 'name', widget: 'string' }
               - { label: 'Description', name: 'description', widget: 'text' }
+
+collections:
+  - name: "Products" # Used in routes, e.g., /admin/collections/blog
+    label: "Products" # Used in the UI
+    folder: "content/products" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Quantidade", name: "quantity", widget: "number"}
+      - {label: "Imagem", name: "thumbnail", widget: "image"}
+      - {label: "Preço", name: "price", widget: "number"}
+      - {label: "Link", name: "url", widget: "string"}
