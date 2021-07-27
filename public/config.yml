@@ -25,12 +25,12 @@ collections:
               - { label: 'Name', name: 'name', widget: 'string' }
               - { label: 'Description', name: 'description', widget: 'text' }
 
-  - name: 'Products' 
-    label: 'Produtos' 
-    folder: 'content/products' 
-    create: true 
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}' 
-    fields: 
+  - name: 'Products'
+    label: 'Produtos'
+    folder: 'content/products'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
       - { label: 'Titulo', name: 'title', widget: 'string' }
       - {
           label: 'Quantidade',
@@ -42,22 +42,21 @@ collections:
       - { label: 'Preço', name: 'price', widget: 'number' }
       - { label: 'Link', name: 'url', widget: 'string' }
 
-    - name: 'Media' 
-      label: 'Imprensa' 
-      folder: 'content/media' 
-      create: true 
-      slug: '{{year}}-{{month}}-{{day}}-{{slug}}' 
-      fields: 
-        - { label: 'Titulo', name: 'title', widget: 'string' }
-        - { label: 'Imagem', name: 'thumbnail', widget: 'image' }
-        - { label: 'Link', name: 'url', widget: 'string' }
+  - name: 'Media'
+    label: 'Imprensa'
+    folder: 'content/media'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - { label: 'Titulo', name: 'title', widget: 'string' }
+      - { label: 'Imagem', name: 'thumbnail', widget: 'image' }
+      - { label: 'Link', name: 'url', widget: 'string' }
 
-    - name: 'Frequent Questions' 
-      label: 'Perguntas Frequentes' 
-      folder: 'content/questions' 
-      create: true 
-      slug: '{{year}}-{{month}}-{{day}}-{{slug}}' 
-      fields: 
-        - { label: 'Titulo', name: 'title', widget: 'string' }
-        - { label: 'Descrição', name: 'description', widget: 'string' }
-
+  - name: 'Frequent Questions'
+    label: 'Perguntas Frequentes'
+    folder: 'content/questions'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - { label: 'Titulo', name: 'title', widget: 'string' }
+      - { label: 'Descrição', name: 'description', widget: 'string' }
