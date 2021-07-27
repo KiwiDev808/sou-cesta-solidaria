@@ -1,11 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from 'react'
 import imagem1 from '../../../../public/images/Banner/imagem1.png'
+import imagem1mobile from '../../../../public/images/Banner/imagem1mobile.jpeg'
 import imagem2 from '../../../../public/images/Banner/imagem2.png'
+import imagem2mobile from '../../../../public/images/Banner/imagem2mobile.jpeg'
 import imagem3 from '../../../../public/images/Banner/imagem3.png'
+import imagem3mobile from '../../../../public/images/Banner/imagem3mobile.jpeg'
 import styles from './styles.module.scss'
 
-const images = [imagem1.src, imagem2.src, imagem3.src]
+const images = [
+  { desktop: imagem1.src, mobile: imagem1mobile.src },
+  { desktop: imagem2.src, mobile: imagem2mobile.src },
+  { desktop: imagem3.src, mobile: imagem3mobile.src },
+]
+
 export const Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const timeoutRef = React.useRef(null)
@@ -61,7 +69,12 @@ export const Banner = () => {
             return index === currentSlide
           })
           .map((img, index) => {
-            return <img key={index} src={img} alt="banner" />
+            return (
+              <picture key={index}>
+                <source srcSet={img.mobile} media="(max-width: 768px)" />
+                <img src={img.desktop} alt="MDN" />
+              </picture>
+            )
           })}
       </div>
       <div className={styles.slideBadges}>
