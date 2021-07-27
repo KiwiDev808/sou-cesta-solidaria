@@ -1,6 +1,11 @@
 backend:
-  name: test-repo
-  branch: main # Branch to update (optional; defaults to master)
+  name: github
+  repo: KiwiDev808/sou-cesta-solidaria
+  branch: test/netlify-cms
+  base_url: https://sou-cesta-solidaria-teste.vercel.app
+  auth_endpoint: api/auth
+
+local_backend: true
 media_folder: public/img
 public_folder: img
 collections:
