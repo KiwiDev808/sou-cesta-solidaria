@@ -25,14 +25,39 @@ collections:
               - { label: 'Name', name: 'name', widget: 'string' }
               - { label: 'Description', name: 'description', widget: 'text' }
 
-  - name: 'Products' # Used in routes, e.g., /admin/collections/blog
-    label: 'Products' # Used in the UI
-    folder: 'content/products' # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+  - name: 'Products' 
+    label: 'Produtos' 
+    folder: 'content/products' 
+    create: true 
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}' 
+    fields: 
       - { label: 'Titulo', name: 'title', widget: 'string' }
-      - { label: 'Quantidade', name: 'quantity', widget: 'number' }
+      - {
+          label: 'Quantidade',
+          name: 'quantity',
+          value_type: 'float',
+          widget: 'number',
+        }
       - { label: 'Imagem', name: 'thumbnail', widget: 'image' }
       - { label: 'Preço', name: 'price', widget: 'number' }
       - { label: 'Link', name: 'url', widget: 'string' }
+
+    - name: 'Media' 
+      label: 'Imprensa' 
+      folder: 'content/media' 
+      create: true 
+      slug: '{{year}}-{{month}}-{{day}}-{{slug}}' 
+      fields: 
+        - { label: 'Titulo', name: 'title', widget: 'string' }
+        - { label: 'Imagem', name: 'thumbnail', widget: 'image' }
+        - { label: 'Link', name: 'url', widget: 'string' }
+
+    - name: 'Frequent Questions' 
+      label: 'Perguntas Frequentes' 
+      folder: 'content/questions' 
+      create: true 
+      slug: '{{year}}-{{month}}-{{day}}-{{slug}}' 
+      fields: 
+        - { label: 'Titulo', name: 'title', widget: 'string' }
+        - { label: 'Descrição', name: 'description', widget: 'string' }
+
