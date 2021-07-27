@@ -1,0 +1,13 @@
+PRIMEIRO PASSO - yarn install || npm install
+SEGUNDO PASSO - Criar Schema no MySQL chamado cestou_db
+TERCEIRO PASSO - yarn sequelize db:migrate || npx sequelize db:migrate
+
+Explicação das Rotas:
+// POST Registrando usuário no banco de dados
+router.post("/register", UserController.register);
+
+//POST Autenticando usuário para login
+router.post("/authenticate", UserController.authenticating);
+
+// Destruindo sessão criada pelo usuário
+router.get("/logout", UserController.logout);
