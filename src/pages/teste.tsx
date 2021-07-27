@@ -8,7 +8,7 @@ export default function Teste() {
   return (
     <Layout title="Sou Cesta Solidária">
       <div>
-        <h1>{title}mudado</h1>
+        <h1>{title}</h1>
         <Sample />
         <ul>
           {cats.map((cat, k) => (
