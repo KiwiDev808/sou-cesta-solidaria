@@ -2,6 +2,11 @@
 
 Esse repositório contém o código desenvolvido durante o evento HACK4GOOD da Provi, em que a equipe foi reponsável por fazer o redesign do site da ONG Sou Cesta Solidária, uma ONG que busca promover a alimentação saudável criando um sistema sustentável e auxiliar pessoas vuneráveis.
 
+### Obs:
+
+Toda a parte do backend de criação e autenticação do usuário está pronta, porem a integração com o frontend não foi feita.
+- [Backend](https://github.com/cei29/cestou_back)
+
 ## [Visite](https://sou-cesta-solidaria.vercel.app/)
 
 ## ⛏ Tecnologias
