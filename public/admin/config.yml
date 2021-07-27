@@ -5,7 +5,6 @@ backend:
   base_url: https://sou-cesta-solidaria-teste.vercel.app
   auth_endpoint: api/auth
 
-local_backend: true
 media_folder: public/img
 public_folder: img
 collections:
