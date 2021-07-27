@@ -72,7 +72,7 @@ export const Banner = () => {
             return (
               <picture key={index}>
                 <source srcSet={img.mobile} media="(max-width: 768px)" />
-                <img src={img.desktop} alt="MDN" />
+                <img src={img.desktop} alt="banner" />
               </picture>
             )
           })}
