@@ -1,11 +1,14 @@
 backend:
   name: github
   repo: KiwiDev808/sou-cesta-solidaria
-  branch: test/netlify-cms
-  base_url: https://sou-cesta-solidaria-teste.vercel.app
+  branch: main
+  base_url: https://sou-cesta-solidaria.vercel.app
   auth_endpoint: api/auth
+  squash_merges: true
 
-site_url: https://sou-cesta-solidaria-teste.vercel.app
+show_preview_links: false
+locale: 'pt'
+site_url: https://sou-cesta-solidaria.vercel.app
 
 publish_mode: editorial_workflow
 media_folder: public/uploads
