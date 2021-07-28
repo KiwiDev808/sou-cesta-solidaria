@@ -5,6 +5,9 @@ backend:
   base_url: https://sou-cesta-solidaria-teste.vercel.app
   auth_endpoint: api/auth
 
+site_url: https://sou-cesta-solidaria-teste.vercel.app
+
+publish_mode: editorial_workflow
 media_folder: public/uploads
 public_folder: /uploads
 collections:
@@ -25,38 +28,61 @@ collections:
               - { label: 'Name', name: 'name', widget: 'string' }
               - { label: 'Description', name: 'description', widget: 'text' }
 
-  - name: 'Products'
+  - name: 'products'
     label: 'Produtos'
+    label_singular: 'Produto'
+    format: json
+    extension: json
     folder: 'content/products'
-    create: true
+    summary: '{{title}} -- {{year}}/{{month}}/{{day}}'
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - { label: 'Titulo', name: 'title', widget: 'string' }
+      - { label: 'Nome', name: 'title', widget: 'string' }
       - {
           label: 'Quantidade',
           name: 'quantity',
           value_type: 'float',
           widget: 'number',
         }
-      - { label: 'Imagem', name: 'thumbnail', widget: 'image' }
+      - {
+          label: 'Imagem de Capa',
+          name: 'image',
+          widget: 'image',
+          required: true,
+        }
       - { label: 'Preço', name: 'price', widget: 'number' }
-      - { label: 'Link', name: 'url', widget: 'string' }
+      - { label: 'Link da Compra', name: 'url', widget: 'string' }
 
   - name: 'Media'
     label: 'Imprensa'
+    format: json
+    extension: json
     folder: 'content/media'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - { label: 'Titulo', name: 'title', widget: 'string' }
-      - { label: 'Imagem', name: 'thumbnail', widget: 'image' }
-      - { label: 'Link', name: 'url', widget: 'string' }
+      - {
+          label: 'Imagem de Capa',
+          name: 'image',
+          widget: 'image',
+          required: false,
+        }
+      - { label: 'Link', name: 'url', widget: 'string', hint: 'Link .' }
 
-  - name: 'Frequent Questions'
+  - name: 'frequent questions'
     label: 'Perguntas Frequentes'
+    format: json-frontmatter
+    extension: json-frontmatter
+    label_singular: 'Pergunta'
     folder: 'content/questions'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - { label: 'Titulo', name: 'title', widget: 'string' }
-      - { label: 'Descrição', name: 'description', widget: 'string' }
+      - { label: 'Pergunta', name: 'title', widget: 'string', tagname: 'h1' }
+      - {
+          label: 'Resposta',
+          name: 'body',
+          widget: 'markdown',
+          hint: 'Descrição da resposta da pergunta.',
+        }

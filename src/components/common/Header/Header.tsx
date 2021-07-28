@@ -14,7 +14,11 @@ const Header = () => {
   return (
     <header className={styles.headerContainer}>
       <div className={styles.logo}>
-        <img src={logo.src} alt="site logo" />
+        <Link href="/" passHref>
+          <a>
+            <img src={logo.src} alt="site logo" />
+          </a>
+        </Link>
       </div>
       <div className={styles.navigationArea}>
         <div className={styles.userArea}>
