@@ -33,6 +33,7 @@ collections:
     label_singular: 'Produto'
     format: json
     extension: json
+    create: true
     folder: 'content/products'
     summary: '{{title}} -- {{year}}/{{month}}/{{day}}'
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
