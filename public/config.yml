@@ -4,7 +4,6 @@ backend:
   branch: main
   base_url: https://sou-cesta-solidaria.vercel.app
   auth_endpoint: api/auth
-  squash_merges: true
 
 show_preview_links: false
 locale: 'pt'
@@ -34,8 +33,6 @@ collections:
   - name: 'products'
     label: 'Produtos'
     label_singular: 'Produto'
-    format: json
-    extension: json
     create: true
     folder: 'content/products'
     summary: '{{title}} -- {{year}}/{{month}}/{{day}}'
@@ -59,8 +56,6 @@ collections:
 
   - name: 'Media'
     label: 'Imprensa'
-    format: json
-    extension: json
     folder: 'content/media'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
@@ -76,8 +71,6 @@ collections:
 
   - name: 'frequent questions'
     label: 'Perguntas Frequentes'
-    format: json-frontmatter
-    extension: json-frontmatter
     label_singular: 'Pergunta'
     folder: 'content/questions'
     create: true
