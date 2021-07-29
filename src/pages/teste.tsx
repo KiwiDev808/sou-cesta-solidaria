@@ -1,8 +1,12 @@
 import React from 'react'
 import { attributes, react as Sample } from '../../content/home.md'
 import Layout from '../components/common/Layout/Layout'
+import { fetchMediaContent } from '../lib/media'
+import { fetchPostContent } from '../lib/products'
 
-export default function Teste() {
+export default function Teste({ posts, media }) {
+  console.log(posts)
+  console.log(media)
   let { title, cats } = attributes
 
   return (
@@ -21,4 +25,12 @@ export default function Teste() {
       </div>
     </Layout>
   )
+}
+
+export async function getServerSideProps(context) {
+  const posts = fetchPostContent()
+  const media = fetchMediaContent()
+  return {
+    props: { posts, media }, // will be passed to the page component as props
+  }
 }

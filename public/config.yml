@@ -68,6 +68,14 @@ collections:
           required: false,
         }
       - { label: 'Link', name: 'url', widget: 'string', hint: 'Link .' }
+      - {
+          required: true,
+          label: 'Data',
+          name: 'date',
+          widget: 'datetime',
+          date_format: 'DD.MM.YYYY',
+          time_format: 'HH:mm',
+        }
 
   - name: 'frequent questions'
     label: 'Perguntas Frequentes'
@@ -77,9 +85,4 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - { label: 'Pergunta', name: 'title', widget: 'string', tagname: 'h1' }
-      - {
-          label: 'Resposta',
-          name: 'body',
-          widget: 'markdown',
-          hint: 'Descrição da resposta da pergunta.',
-        }
+      - { label: 'Resposta', name: 'body', widget: 'markdown' }

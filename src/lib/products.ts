@@ -1,4 +1,4 @@
-import fs from 'fs'
+import * as fs from 'fs'
 import matter from 'gray-matter'
 import yaml from 'js-yaml'
 import path from 'path'
@@ -22,7 +22,7 @@ export function fetchPostContent(): ProductContent[] {
   // Get file names under /posts
   const fileNames = fs.readdirSync(productsDirectory)
   const allPostsData = fileNames
-    .filter((it) => it.endsWith('.mdx'))
+    .filter((it) => it.endsWith('.md'))
     .map((fileName) => {
       // Read markdown file as string
       const fullPath = path.join(productsDirectory, fileName)
