@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "compras/index.tsx": {
+      "includeFiles": "content/**"
+    }
+  }
+}
