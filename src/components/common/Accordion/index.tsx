@@ -6,6 +6,7 @@ import {
 } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import React from 'react'
+import ReactMarkdown from 'react-markdown'
 
 const Accordion = (props) => {
   const { title, description } = props
@@ -19,7 +20,9 @@ const Accordion = (props) => {
         <Typography variant="h6">{title}</Typography>
       </AccordionSummary>
       <AccordionDetails>
-        <Typography>{description}</Typography>
+        <Typography>
+          <ReactMarkdown>{description}</ReactMarkdown>
+        </Typography>
       </AccordionDetails>
     </MuiAccordion>
   )

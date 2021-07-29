@@ -4,16 +4,20 @@ import { attributes, react as Sample } from '../../content/home.md'
 import Layout from '../components/common/Layout/Layout'
 import { fetchMediaContent, MediaContent } from '../lib/media'
 import { fetchPostContent, ProductContent } from '../lib/products'
+import { fetchQuestionContent, QuestionContent } from '../lib/questions'
 
 export default function Teste({
   posts,
   media,
+  questions,
 }: {
   posts: ProductContent[]
   media: MediaContent[]
+  questions: QuestionContent[]
 }) {
   console.log(posts)
   console.log(media)
+  console.log(questions)
   let { title, cats } = attributes
 
   return (
@@ -37,7 +41,8 @@ export default function Teste({
 export async function getServerSideProps(context) {
   const posts = fetchPostContent()
   const media = fetchMediaContent()
+  const questions = fetchQuestionContent()
   return {
-    props: { posts, media }, // will be passed to the page component as props
+    props: { posts, media, questions }, // will be passed to the page component as props
   }
 }

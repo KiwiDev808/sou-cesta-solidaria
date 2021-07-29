@@ -33,18 +33,14 @@ collections:
   - name: 'products'
     label: 'Produtos'
     label_singular: 'Produto'
+    identifier_field: type
     create: true
     folder: 'content/products'
-    summary: '{{title}} -- {{year}}/{{month}}/{{day}}'
+    summary: '{{title}}-{{type}} -- {{year}}/{{month}}/{{day}}'
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - { label: 'Nome', name: 'title', widget: 'string' }
-      - {
-          label: 'Quantidade',
-          name: 'quantity',
-          value_type: 'float',
-          widget: 'number',
-        }
+      - { label: 'Tipo', name: 'type', widget: 'string' }
       - {
           label: 'Imagem de Capa',
           name: 'image',
