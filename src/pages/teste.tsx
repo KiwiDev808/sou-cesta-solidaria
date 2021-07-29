@@ -1,10 +1,17 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import { attributes, react as Sample } from '../../content/home.md'
 import Layout from '../components/common/Layout/Layout'
-import { fetchMediaContent } from '../lib/media'
-import { fetchPostContent } from '../lib/products'
+import { fetchMediaContent, MediaContent } from '../lib/media'
+import { fetchPostContent, ProductContent } from '../lib/products'
 
-export default function Teste({ posts, media }) {
+export default function Teste({
+  posts,
+  media,
+}: {
+  posts: ProductContent[]
+  media: MediaContent[]
+}) {
   console.log(posts)
   console.log(media)
   let { title, cats } = attributes

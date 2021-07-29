@@ -77,7 +77,7 @@ collections:
           time_format: 'HH:mm',
         }
 
-  - name: 'frequent questions'
+  - name: 'questions'
     label: 'Perguntas Frequentes'
     label_singular: 'Pergunta'
     folder: 'content/questions'
