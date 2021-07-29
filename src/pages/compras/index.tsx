@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../../components/common/Layout/Layout'
 import { CardProduto } from '../../components/Loja/CardProduto'
-import { fetchProductContent } from '../../lib/products'
+import { fetchProductContent, ProductContent } from '../../lib/products'
 import styles from './styles.module.scss'
 
 const Compras = ({ products }: { products: ProductContent[] }) => {
