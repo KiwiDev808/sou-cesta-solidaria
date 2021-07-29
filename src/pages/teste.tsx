@@ -3,7 +3,7 @@ import React from 'react'
 import { attributes, react as Sample } from '../../content/home.md'
 import Layout from '../components/common/Layout/Layout'
 import { fetchMediaContent, MediaContent } from '../lib/media'
-import { fetchPostContent, ProductContent } from '../lib/products'
+import { fetchProductContent, ProductContent } from '../lib/products'
 import { fetchQuestionContent, QuestionContent } from '../lib/questions'
 
 export default function Teste({
@@ -39,7 +39,7 @@ export default function Teste({
 }
 
 export async function getServerSideProps(context) {
-  const posts = fetchPostContent()
+  const posts = fetchProductContent()
   const media = fetchMediaContent()
   const questions = fetchQuestionContent()
   return {

@@ -1,58 +1,24 @@
 import React from 'react'
-import imagem1cesta from '../../../public/images/Loja/cesta solidaria_produtos1.png'
-import imagem2cesta from '../../../public/images/Loja/cesta solidaria_produtos2.png'
-import imagem4cesta from '../../../public/images/Loja/cesta solidaria_produtos4.png'
-import imagem6cesta from '../../../public/images/Loja/cesta solidaria_produtos6.png'
 import Layout from '../../components/common/Layout/Layout'
 import { CardProduto } from '../../components/Loja/CardProduto'
+import { fetchProductContent, ProductContent } from '../../lib/products'
 import styles from './styles.module.scss'
 
-const produtos = [
-  {
-    image: imagem1cesta.src,
-    name: 'Cesta Orgânica',
-    value: '99,00',
-    size: '1 Cesta',
-    link: 'https://mpago.la/2h68hZi',
-  },
-  {
-    image: imagem2cesta.src,
-    name: 'Cesta Orgânica',
-    value: '198,00',
-    size: '2 Cestas',
-    link: 'https://mpago.la/11JXbuS',
-  },
-  {
-    image: imagem4cesta.src,
-    name: 'Cesta Orgânica',
-    value: '396,00',
-    size: '4 Cestas',
-    link: 'https://mpago.la/2XgBz1T',
-  },
-  {
-    image: imagem6cesta.src,
-    name: 'Cesta Orgânica',
-    value: '594,00',
-    size: '6 Cestas',
-    link: 'https://mpago.la/1uK4x3g',
-  },
-]
-
-const Compras = () => {
+const Compras = ({ products }: { products: ProductContent[] }) => {
   return (
     <Layout title="Compras - Sou Cesta Solidária">
       <div className={styles.lojaContainer}>
         <h2>Assinaturas</h2>
         <div className={styles.listaProdutos}>
-          {produtos.map((produto, index) => {
+          {products.map((product, index) => {
             return (
               <CardProduto
                 key={index}
-                image={produto.image}
-                name={produto.name}
-                value={produto.value}
-                size={produto.size}
-                link={produto.link}
+                image={product.image}
+                name={product.title}
+                value={product.price}
+                size={product.type}
+                link={product.url}
               />
             )
           })}
@@ -60,6 +26,13 @@ const Compras = () => {
       </div>
     </Layout>
   )
+}
+
+export async function getServerSideProps(context) {
+  const products = fetchProductContent()
+  return {
+    props: { products }, // will be passed to the page component as props
+  }
 }
 
 export default Compras

@@ -7,15 +7,15 @@ const productsDirectory = path.join(process.cwd(), '/content/products')
 
 export type ProductContent = {
   readonly title: string
-  readonly quantity: number
-  readonly thumbnail: string
+  readonly type: string
+  readonly image: string
   readonly price: number
   readonly url: string
 }
 
 let productCache: ProductContent[]
 
-export function fetchPostContent(): ProductContent[] {
+export function fetchProductContent(): ProductContent[] {
   if (productCache) {
     return productCache
   }
@@ -37,8 +37,8 @@ export function fetchPostContent(): ProductContent[] {
 
       const matterData = matterResult.data as {
         title: string
-        quantity: number
-        thumbnail: string
+        type: string
+        image: string
         price: number
         url: string
       }
@@ -47,7 +47,7 @@ export function fetchPostContent(): ProductContent[] {
     })
   // Sort posts by date
   productCache = allPostsData.sort((a, b) => {
-    if (a.price < b.price) {
+    if (a.price > b.price) {
       return 1
     } else {
       return -1
