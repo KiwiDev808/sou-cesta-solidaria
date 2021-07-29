@@ -7,8 +7,6 @@ import Layout from '../../components/common/Layout/Layout'
 import { CardProduto } from '../../components/Loja/CardProduto'
 import styles from './styles.module.scss'
 
-const productsDirectory = path.join(process.cwd(), '/content/products')
-
 export type ProductContent = {
   readonly title: string
   readonly type: string
@@ -42,6 +40,8 @@ const Compras = ({ products }: { products: ProductContent[] }) => {
 }
 
 export async function getServerSideProps(context) {
+  const productsDirectory = path.join(process.cwd(), '/content/products')
+
   const fileNames = fs.readdirSync(productsDirectory)
   const allPostsData = fileNames
     .filter((it) => it.endsWith('.md'))
