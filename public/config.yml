@@ -18,7 +18,7 @@ collections:
     files:
       - label: 'Home'
         name: 'home'
-        file: 'content/home.md'
+        file: 'public/content/home.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Publish Date', name: 'date', widget: 'datetime' }
@@ -35,7 +35,7 @@ collections:
     label_singular: 'Produto'
     identifier_field: type
     create: true
-    folder: 'content/products'
+    folder: 'public/content/products'
     summary: '{{title}}-{{type}} -- {{year}}/{{month}}/{{day}}'
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
@@ -52,7 +52,7 @@ collections:
 
   - name: 'Media'
     label: 'Imprensa'
-    folder: 'content/media'
+    folder: 'public/content/media'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
@@ -76,7 +76,7 @@ collections:
   - name: 'questions'
     label: 'Perguntas Frequentes'
     label_singular: 'Pergunta'
-    folder: 'content/questions'
+    folder: 'public/content/questions'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:

@@ -1,14 +1,9 @@
 import * as fs from 'fs'
 import matter from 'gray-matter'
 import yaml from 'js-yaml'
-import getConfig from 'next/config'
 import path from 'path'
 
-const { serverRuntimeConfig } = getConfig()
-const productsDirectory = path.join(
-  serverRuntimeConfig.PROJECT_ROOT,
-  '/content/products'
-)
+const productsDirectory = path.join(process.cwd(), '/content/products')
 
 export type ProductContent = {
   readonly title: string
