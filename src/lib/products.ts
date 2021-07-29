@@ -3,8 +3,6 @@ import matter from 'gray-matter'
 import yaml from 'js-yaml'
 import path from 'path'
 
-const productsDirectory = path.join(process.cwd(), '/content/products')
-
 export type ProductContent = {
   readonly title: string
   readonly type: string
@@ -15,7 +13,9 @@ export type ProductContent = {
 
 let productCache: ProductContent[]
 
-export function fetchProductContent(): ProductContent[] {
+export function fetchProductContent(
+  productsDirectory: string
+): ProductContent[] {
   if (productCache) {
     return productCache
   }
