@@ -2,6 +2,7 @@ import * as fs from 'fs'
 import matter from 'gray-matter'
 import yaml from 'js-yaml'
 import path from 'path'
+import { Remarkable } from 'remarkable'
 
 export type QuestionContent = {
   readonly title: string
@@ -16,6 +17,8 @@ export function fetchQuestionContent(
   if (questionCache) {
     return questionCache
   }
+
+  let md = new Remarkable()
 
   const fileNames = fs.readdirSync(questionsDirectory)
   const allQuestionsData = fileNames
@@ -32,7 +35,7 @@ export function fetchQuestionContent(
 
       const matterData = {
         title: matterResult.data?.title,
-        body: matterResult.content,
+        body: md.render(matterResult.content),
       } as {
         title: string
         body: string
