@@ -27,7 +27,7 @@ const PerguntasFrequentes = ({
   )
 }
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   const questionsPath = process.cwd() + '/content/questions'
 
   const questions = fetchQuestionContent(questionsPath)
