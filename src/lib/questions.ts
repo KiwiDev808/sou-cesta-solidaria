@@ -17,8 +17,6 @@ export function fetchQuestionContent(
     return questionCache
   }
 
-  let md = new Remarkable()
-
   const fileNames = fs.readdirSync(questionsDirectory)
   const allQuestionsData = fileNames
     .filter((it) => it.endsWith('.md'))
