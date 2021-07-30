@@ -5,7 +5,6 @@ import {
   Typography,
 } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-import parse from 'html-react-parser'
 import React from 'react'
 
 const Accordion = (props) => {
@@ -20,7 +19,7 @@ const Accordion = (props) => {
         <Typography variant="h6">{title}</Typography>
       </AccordionSummary>
       <AccordionDetails>
-        <Typography>{parse(description)}</Typography>
+        <Typography>{description}</Typography>
       </AccordionDetails>
     </MuiAccordion>
   )

@@ -81,4 +81,4 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - { label: 'Pergunta', name: 'title', widget: 'string', tagname: 'h1' }
-      - { label: 'Resposta', name: 'body', widget: 'markdown' }
+      - { label: 'Resposta', name: 'body', widget: 'text' }
