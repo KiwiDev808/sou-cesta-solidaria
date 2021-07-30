@@ -33,7 +33,8 @@ export async function getStaticProps(context) {
 
   const products = fetchProductContent(productsPath)
   return {
-    props: { products }, // will be passed to the page component as props
+    props: { products },
+    revalidate: 60 * 60 * 24, // 1 day in seconds
   }
 }
 

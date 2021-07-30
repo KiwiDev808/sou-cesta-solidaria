@@ -17,7 +17,8 @@ export async function getStaticProps(context) {
   const mediaPath = process.cwd() + '/content/media'
   const media = fetchMediaContent(mediaPath)
   return {
-    props: { media }, // will be passed to the page component as props
+    props: { media },
+    revalidate: 60 * 60 * 24, // 1 day in seconds
   }
 }
 

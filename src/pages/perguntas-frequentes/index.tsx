@@ -32,7 +32,8 @@ export async function getServerSideProps(context) {
 
   const questions = fetchQuestionContent(questionsPath)
   return {
-    props: { questions: questions }, // will be passed to the page component as props
+    props: { questions: questions },
+    revalidate: 60 * 60 * 24, // 1 day in seconds
   }
 }
 
