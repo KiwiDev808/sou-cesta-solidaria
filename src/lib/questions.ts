@@ -3,6 +3,7 @@ import matter from 'gray-matter'
 import yaml from 'js-yaml'
 import path from 'path'
 import { Remarkable } from 'remarkable'
+import sanitizeHtml from 'sanitize-html'
 
 export type QuestionContent = {
   readonly title: string
@@ -35,7 +36,7 @@ export function fetchQuestionContent(
 
       const matterData = {
         title: matterResult.data?.title,
-        body: md.render(matterResult.content),
+        body: sanitizeHtml(md.render(matterResult.content)),
       } as {
         title: string
         body: string
