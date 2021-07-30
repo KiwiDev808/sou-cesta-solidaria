@@ -3,8 +3,6 @@ import matter from 'gray-matter'
 import yaml from 'js-yaml'
 import path from 'path'
 
-const mediaDirectory = path.join(process.cwd(), '/content/media')
-
 export type MediaContent = {
   readonly title: string
   readonly image: string
@@ -14,7 +12,7 @@ export type MediaContent = {
 
 let mediaCache: MediaContent[]
 
-export function fetchMediaContent(): MediaContent[] {
+export function fetchMediaContent(mediaDirectory: string): MediaContent[] {
   if (mediaCache) {
     return mediaCache
   }

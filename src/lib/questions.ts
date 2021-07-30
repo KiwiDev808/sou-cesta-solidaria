@@ -3,7 +3,6 @@ import matter from 'gray-matter'
 import yaml from 'js-yaml'
 import path from 'path'
 
-const questionsDirectory = path.join(process.cwd(), '/content/questions')
 export type QuestionContent = {
   readonly title: string
   readonly body: string
@@ -11,7 +10,9 @@ export type QuestionContent = {
 
 let questionCache: QuestionContent[]
 
-export function fetchQuestionContent(): QuestionContent[] {
+export function fetchQuestionContent(
+  questionsDirectory: string
+): QuestionContent[] {
   if (questionCache) {
     return questionCache
   }

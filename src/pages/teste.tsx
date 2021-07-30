@@ -2,9 +2,9 @@
 import React from 'react'
 import { attributes, react as Sample } from '../../content/home.md'
 import Layout from '../components/common/Layout/Layout'
-import { fetchMediaContent, MediaContent } from '../lib/media'
-import { fetchProductContent, ProductContent } from '../lib/products'
-import { fetchQuestionContent, QuestionContent } from '../lib/questions'
+import { MediaContent } from '../lib/media'
+import { ProductContent } from '../lib/products'
+import { QuestionContent } from '../lib/questions'
 
 export default function Teste({
   posts,
@@ -39,9 +39,9 @@ export default function Teste({
 }
 
 export async function getServerSideProps(context) {
-  const posts = fetchProductContent()
-  const media = fetchMediaContent()
-  const questions = fetchQuestionContent()
+  const posts = [] as any
+  const media = [] as any
+  const questions = [] as any
   return {
     props: { posts, media, questions }, // will be passed to the page component as props
   }
