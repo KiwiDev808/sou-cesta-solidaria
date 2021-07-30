@@ -5,20 +5,20 @@ import InstagramIcon from '@material-ui/icons/Instagram'
 import WhatsAppIcon from '@material-ui/icons/WhatsApp'
 import Link from 'next/link'
 import React from 'react'
-import logo from '../../../../public/images/logo.jpeg'
+import logo from '../../../../public/images/logo.png'
 import styles from './styles.module.scss'
 
 export const Footer = () => {
   return (
     <div className={styles.footerContainer}>
       <section className={styles.siteMap}>
-        <article className={styles.logo}>
-          <Link href="/" passHref>
-            <a>
+        <Link href="/" passHref>
+          <a>
+            <article className={styles.logo}>
               <img src={logo.src} alt="site logo" />
-            </a>
-          </Link>
-        </article>
+            </article>
+          </a>
+        </Link>
         <article className={styles.column1}>
           <h3>Sou Cesta Solidária</h3>
           <nav className={styles.navLinks}>

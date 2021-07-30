@@ -12,9 +12,13 @@
     width: 100%;
   }
 
+  a:hover {
+    text-decoration: underline;
+  }
+
   h3 {
     margin-top: 0;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   hr {
@@ -24,15 +28,11 @@
 
   .siteMap {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap;
-    & > * {
-      flex-basis: 300px;
-    }
     .logo {
       object-fit: contain;
-      max-height: 120px;
+      max-height: 200px;
       aspect-ratio: 1/1;
       img {
         width: 100%;
@@ -44,28 +44,38 @@
       display: flex;
       flex-direction: column;
       .navLinks {
-        font-size: 1rem;
+        font-size: 1.375rem;
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 0.75rem;
       }
     }
     .socialMedia {
       .iconsContainer {
         display: flex;
         flex-direction: column;
-        font-size: 1rem;
-        gap: 0.25rem;
+        gap: 0.75rem;
 
         article {
+          font-size: 1.375rem;
           display: flex;
           align-items: center;
           gap: 0.5rem;
         }
       }
     }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 3.5rem;
+      align-items: center;
+      text-align: center;
+    }
   }
   .address {
+    display: flex;
+    word-wrap: break-word;
+    justify-content: center;
     font-style: none;
     font-size: 1rem;
   }
