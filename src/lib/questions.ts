@@ -2,7 +2,6 @@ import * as fs from 'fs'
 import matter from 'gray-matter'
 import yaml from 'js-yaml'
 import path from 'path'
-import { Remarkable } from 'remarkable'
 
 export type QuestionContent = {
   readonly title: string
