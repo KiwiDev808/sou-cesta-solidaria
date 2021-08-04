@@ -1,3 +1,10 @@
 {
-  "basket_types": [{ "type": "Mix" }]
+  "basket_types": [
+    {
+      "type": "Mix"
+    },
+    {
+      "type": "Frutas"
+    }
+  ]
 }
