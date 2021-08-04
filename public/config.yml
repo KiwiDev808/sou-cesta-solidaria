@@ -95,9 +95,9 @@ collections:
           widget: 'relation',
           collection: 'config',
           file: 'general',
-          search_fields: ['basket_sizes.size'],
-          value_field: basket_sizes.size,
-          display_fields: ['basket_sizes.size'],
+          search_fields: ['general.basket_sizes.size'],
+          value_field: general.basket_sizes.size,
+          display_fields: ['general.basket_sizes.size'],
         }
 
   - name: 'Media'
