@@ -13,6 +13,46 @@ publish_mode: editorial_workflow
 media_folder: public/uploads
 public_folder: /uploads
 collections:
+  - name: 'config'
+    label: 'Config'
+    delete: false
+    files:
+      - name: 'general'
+        label: 'Site Config'
+        file: 'config.json'
+        description: 'General site settings'
+        fields:
+          - label: 'Site title'
+            name: 'site_title'
+            widget: 'string'
+          - label: 'Site description'
+            name: 'site_description'
+            widget: 'string'
+          - label: 'Tipo de fatura'
+            name: 'invoice_types'
+            widget: 'list'
+            summary: '{{fields.tipo.type}}'
+            field:
+              label: tipo
+              name: type
+              widget: 'string'
+          - label: 'Tamanho de cesta'
+            name: 'basket_sizes'
+            widget: 'list'
+            summary: '{{fields.tamanho.size}}'
+            field:
+              label: tamanho
+              name: size
+              widget: 'string'
+          - label: 'Tipo de Cesta'
+            name: 'basket_types'
+            widget: 'list'
+            summary: '{{fields.tipo.type}}'
+            field:
+              label: tipo
+              name: type
+              widget: 'string'
+
   - name: 'pages'
     label: 'Pages'
     files:
@@ -49,6 +89,16 @@ collections:
         }
       - { label: 'Preço', name: 'price', widget: 'number' }
       - { label: 'Link da Compra', name: 'url', widget: 'string' }
+      - {
+          label: 'Tipo de Fatura',
+          name: 'invoice_type',
+          widget: 'relation',
+          collection: 'config',
+          file: 'general',
+          search_fields: ['basket_sizes.size'],
+          value_field: basket_sizes.size,
+          display_fields: ['basket_sizes.size'],
+        }
 
   - name: 'Media'
     label: 'Imprensa'
