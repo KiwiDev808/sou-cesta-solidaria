@@ -41,9 +41,9 @@ collections:
             widget: list
             allow_add: true
             fields:
-              label: tamanho
-              name: size
-              widget: 'string'
+              - label: tamanho
+                name: size
+                widget: 'string'
 
       - label: 'Tipo de Cesta'
         name: 'basket_types'
@@ -55,9 +55,9 @@ collections:
             widget: list
             allow_add: true
             fields:
-              label: tipo
-              name: type
-              widget: 'string'
+              - label: tipo
+                name: type
+                widget: 'string'
 
   - name: 'pages'
     label: 'Pages'
@@ -101,9 +101,9 @@ collections:
           widget: 'relation',
           collection: 'config',
           file: 'invoice_types',
-          search_fields: invoice_types.*.type,
+          search_fields: [invoice_types.*.type],
           value_field: invoice_types.*.type,
-          display_fields: invoice_types.*.type,
+          display_fields: [invoice_types.*.type],
         }
 
   - name: 'Media'
