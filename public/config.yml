@@ -101,9 +101,9 @@ collections:
           widget: 'relation',
           collection: 'config',
           file: 'invoice_types',
-          search_fields: ['invoice_types.*.type'],
+          search_fields: invoice_types.*.type,
           value_field: invoice_types.*.type,
-          display_fields: ['invoice_types.*.type'],
+          display_fields: invoice_types.*.type,
         }
 
   - name: 'Media'
