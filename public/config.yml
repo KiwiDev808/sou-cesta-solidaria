@@ -21,7 +21,7 @@ collections:
         name: 'invoice_types'
         file: 'config/invoice_types.json'
         allow_add: true
-        field:
+        fields:
           - label: Tipo de fatura
             name: invoice_types
             widget: list
@@ -35,7 +35,7 @@ collections:
         name: 'basket_sizes'
         allow_add: true
         file: 'config/basket_sizes.json'
-        field:
+        fields:
           - label: Tamanho de Cesta
             name: basket_sizes
             widget: list
@@ -49,7 +49,7 @@ collections:
         name: 'basket_types'
         allow_add: true
         file: 'config/basket_types.json'
-        field:
+        fields:
           - label: Tipo de Cesta
             name: basket_types
             widget: list
