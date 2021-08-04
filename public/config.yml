@@ -17,38 +17,44 @@ collections:
     label: 'Config'
     delete: false
     files:
-      - name: 'general'
-        label: 'Site Config'
-        file: 'config.json'
-        description: 'General site settings'
-        fields:
-          - label: 'Site title'
-            name: 'site_title'
-            widget: 'string'
-          - label: 'Site description'
-            name: 'site_description'
-            widget: 'string'
-          - label: 'Tipo de fatura'
-            name: 'invoice_types'
-            widget: 'list'
-            summary: '{{fields.tipo.type}}'
-            field:
-              label: tipo
-              name: type
-              widget: 'string'
-          - label: 'Tamanho de cesta'
-            name: 'basket_sizes'
-            widget: 'list'
-            summary: '{{fields.tamanho.size}}'
-            field:
+      - label: 'Tipo de fatura'
+        name: 'invoice_types'
+        file: 'config/invoice_types.json'
+        allow_add: true
+        field:
+          - label: Tipo de fatura
+            name: invoice_types
+            widget: list
+            allow_add: true
+            fields:
+              - label: tipo
+                name: type
+                widget: string
+
+      - label: 'Tamanho de cesta'
+        name: 'basket_sizes'
+        allow_add: true
+        file: 'config/basket_sizes.json'
+        field:
+          - label: Tamanho de Cesta
+            name: basket_sizes
+            widget: list
+            allow_add: true
+            fields:
               label: tamanho
               name: size
               widget: 'string'
-          - label: 'Tipo de Cesta'
-            name: 'basket_types'
-            widget: 'list'
-            summary: '{{fields.tipo.type}}'
-            field:
+
+      - label: 'Tipo de Cesta'
+        name: 'basket_types'
+        allow_add: true
+        file: 'config/basket_types.json'
+        field:
+          - label: Tipo de Cesta
+            name: basket_types
+            widget: list
+            allow_add: true
+            fields:
               label: tipo
               name: type
               widget: 'string'
@@ -94,10 +100,10 @@ collections:
           name: 'invoice_type',
           widget: 'relation',
           collection: 'config',
-          file: 'general',
-          search_fields: ['general.basket_sizes.size'],
-          value_field: general.basket_sizes.size,
-          display_fields: ['general.basket_sizes.size'],
+          file: 'invoice_types',
+          search_fields: ['invoice_types.*.type'],
+          value_field: invoice_types.*.type,
+          display_fields: ['invoice_types.*.type'],
         }
 
   - name: 'Media'
