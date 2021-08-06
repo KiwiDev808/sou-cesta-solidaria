@@ -1,3 +1,10 @@
 {
-  "invoice_types": [{ "type": "Avulso" }]
+  "invoice_types": [
+    {
+      "type": "Avulso"
+    },
+    {
+      "type": "Assinatura"
+    }
+  ]
 }
