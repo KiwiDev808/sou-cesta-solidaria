@@ -105,6 +105,26 @@ collections:
           value_field: invoice_types.*.type,
           display_fields: [invoice_types.*.type],
         }
+      - {
+          label: 'Tamanho da Cesta',
+          name: 'basket_size',
+          widget: 'relation',
+          collection: 'config',
+          file: 'basket_sizes',
+          search_fields: [basket_sizes.*.size],
+          value_field: basket_sizes.*.size,
+          display_fields: [basket_sizes.*.size],
+        }
+      - {
+          label: 'Tipo de Cesta',
+          name: 'basket_type',
+          widget: 'relation',
+          collection: 'config',
+          file: 'basket_types',
+          search_fields: [basket_types.*.type],
+          value_field: basket_types.*.type,
+          display_fields: [basket_types.*.type],
+        }
 
   - name: 'Media'
     label: 'Imprensa'
