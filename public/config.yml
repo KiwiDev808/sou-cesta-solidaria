@@ -114,7 +114,14 @@ collections:
           display_fields: [basket_types.*.type],
           required: false,
         }
-      - { label: 'Preço', name: 'price', widget: 'number' }
+      - {
+          label: 'Preço',
+          name: 'price',
+          widget: 'number',
+          value_type: 'float',
+          min: 1,
+          step: 0.1,
+        }
       - {
           label: 'Tipo de Fatura',
           name: 'invoice_type',
