@@ -10,10 +10,10 @@ export const CardProduto = (props: ProductContent) => {
         <img src={props?.image} alt="product photo" />
       </div>
       <div className={styles.description}>
-        <h3>{props.title}</h3>
-        <h4>{props?.basket_size}</h4>
-        <h5>{props?.basket_type}</h5>
-        <h5>{props?.invoice_type}</h5>
+        <h3>
+          {props.title} {props?.basket_size} {props?.basket_type}
+        </h3>
+        <h4>{props?.invoice_type}</h4>
       </div>
       <div className={styles.price}>
         <p>Cada cesta</p>
