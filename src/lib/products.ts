@@ -5,7 +5,9 @@ import path from 'path'
 
 export type ProductContent = {
   readonly title: string
-  readonly type: string
+  readonly basket_size: string
+  readonly basket_type: string
+  readonly invoice_type: string
   readonly image: string
   readonly price: number
   readonly url: string
@@ -37,7 +39,9 @@ export function fetchProductContent(
 
       const matterData = matterResult.data as {
         title: string
-        type: string
+        basket_size: string
+        basket_type: string
+        invoice_type: string
         image: string
         price: number
         url: string

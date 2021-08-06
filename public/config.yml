@@ -82,28 +82,15 @@ collections:
     identifier_field: type
     create: true
     folder: 'content/products'
-    summary: '{{title}}-{{type}} -- {{year}}/{{month}}/{{day}}'
+    summary: '{{title}}-{{basket_size}}--{{basket_type}}--{{invoice_type}}'
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - { label: 'Nome', name: 'title', widget: 'string' }
-      - { label: 'Tipo', name: 'type', widget: 'string' }
       - {
           label: 'Imagem de Capa',
           name: 'image',
           widget: 'image',
           required: true,
-        }
-      - { label: 'Preço', name: 'price', widget: 'number' }
-      - { label: 'Link da Compra', name: 'url', widget: 'string' }
-      - {
-          label: 'Tipo de Fatura',
-          name: 'invoice_type',
-          widget: 'relation',
-          collection: 'config',
-          file: 'invoice_types',
-          search_fields: [invoice_types.*.type],
-          value_field: invoice_types.*.type,
-          display_fields: [invoice_types.*.type],
         }
       - {
           label: 'Tamanho da Cesta',
@@ -114,6 +101,7 @@ collections:
           search_fields: [basket_sizes.*.size],
           value_field: basket_sizes.*.size,
           display_fields: [basket_sizes.*.size],
+          required: false,
         }
       - {
           label: 'Tipo de Cesta',
@@ -124,7 +112,20 @@ collections:
           search_fields: [basket_types.*.type],
           value_field: basket_types.*.type,
           display_fields: [basket_types.*.type],
+          required: false,
         }
+      - { label: 'Preço', name: 'price', widget: 'number' }
+      - {
+          label: 'Tipo de Fatura',
+          name: 'invoice_type',
+          widget: 'relation',
+          collection: 'config',
+          file: 'invoice_types',
+          search_fields: [invoice_types.*.type],
+          value_field: invoice_types.*.type,
+          display_fields: [invoice_types.*.type],
+        }
+      - { label: 'Link da Compra', name: 'url', widget: 'string' }
 
   - name: 'Media'
     label: 'Imprensa'

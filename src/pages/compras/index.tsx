@@ -11,16 +11,7 @@ const Compras = ({ products }: { products: ProductContent[] }) => {
         <h2>Assinaturas</h2>
         <div className={styles.listaProdutos}>
           {products.map((product, index) => {
-            return (
-              <CardProduto
-                key={index}
-                image={product.image}
-                name={product.title}
-                value={product.price}
-                size={product.type}
-                link={product.url}
-              />
-            )
+            return <CardProduto key={index} {...{ products }} />
           })}
         </div>
       </div>
