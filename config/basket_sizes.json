@@ -2,6 +2,9 @@
   "basket_sizes": [
     {
       "size": "Pequeno"
+    },
+    {
+      "size": "Grande"
     }
   ]
 }
