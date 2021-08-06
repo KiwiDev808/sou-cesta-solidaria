@@ -16,7 +16,6 @@ export const CardProduto = (props: ProductContent) => {
         <h4>{props?.invoice_type}</h4>
       </div>
       <div className={styles.price}>
-        <p>Cada cesta</p>
         <h4>
           R$ <span>{props?.price}</span>
         </h4>
