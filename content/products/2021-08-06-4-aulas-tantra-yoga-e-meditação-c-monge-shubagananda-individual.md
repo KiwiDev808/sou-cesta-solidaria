@@ -1,6 +1,6 @@
 ---
 title: 4 Aulas Tantra Yoga e Meditação c/ Monge Shubagananda - Individual
-image: /uploads/cesta-solidaria_produtos1.png
+image: /uploads/sampleyouga.jpg
 basket_size: ""
 basket_type: ""
 price: 80
