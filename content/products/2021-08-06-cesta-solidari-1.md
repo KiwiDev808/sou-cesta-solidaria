@@ -1,5 +1,5 @@
 ---
-title: Cesta Solidari
+title: Solidari
 image: /uploads/cesta-solidaria_produtos1.png
 basket_size: Grande
 basket_type: Mix
