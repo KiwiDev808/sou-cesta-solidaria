@@ -1,16 +1,9 @@
-import {
-  FormControl,
-  FormControlLabel,
-  FormLabel,
-  Radio,
-  RadioGroup,
-} from '@material-ui/core'
 import React, { useState } from 'react'
 import { Button } from '../../components/common/Button'
 import Layout from '../../components/common/Layout/Layout'
 import styles from './styles.module.scss'
 
-const values = [
+const donations = [
   { text: 'R$ 10', link: 'https://mpago.la/1cJntS4' },
   { text: 'R$ 20', link: 'https://mpago.la/19Gxv1F' },
   { text: 'R$ 30', link: 'https://mpago.la/2yW5h9m' },
@@ -28,27 +21,28 @@ const Doacao = () => {
     <Layout title="Doação - Sou Cesta Solidária">
       <div className={styles.doacaoContainer}>
         <h2>Doaçoes</h2>
-        <FormControl component="fieldset">
-          <FormLabel component="legend">Doação</FormLabel>
-          <RadioGroup
-            row
-            aria-label="donation"
-            name="donation"
-            value={value}
-            onChange={handleChange}
-          >
-            {values.map((value) => {
-              return (
-                <FormControlLabel
-                  key={value.text}
-                  value={value.link}
-                  control={<Radio />}
-                  label={value.text}
+        <section>
+          {donations.map((donation) => {
+            return (
+              <div key={donation.text}>
+                <input
+                  type="radio"
+                  id={donation.text}
+                  value={donation.link}
+                  checked={value === donation.link}
+                  onChange={handleChange}
                 />
-              )
-            })}
-          </RadioGroup>
-        </FormControl>
+                <label htmlFor={donation.text}>
+                  <h2>{donation.text}</h2>
+                  <p>
+                    Uma doação faz diferença, doe e ajude o Solidari a ajudar
+                    mais familias a sorrir.
+                  </p>
+                </label>
+              </div>
+            )
+          })}
+        </section>
         <Button
           onClick={() => {
             window.open(value, 'newwindow', 'width=1000,height=600')
