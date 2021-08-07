@@ -1,14 +1,15 @@
 .doacaoContainer {
   margin: 0 auto;
-  padding: 2rem;
-  max-width: 1420px;
+  padding: 1rem 1rem 2rem;
+  max-width: 1020px;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   align-items: center;
   & > h2 {
-    font-size: 2.25rem;
-    text-transform: uppercase;
+    align-self: stretch;
+    font-size: 2rem;
+    text-transform: lowercase;
   }
 
   button {

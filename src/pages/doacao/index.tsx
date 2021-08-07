@@ -11,7 +11,7 @@ const donations = [
 ]
 
 const Doacao = () => {
-  const [value, setValue] = useState('female')
+  const [value, setValue] = useState('')
 
   const handleChange = (event) => {
     setValue(event.target.value)
@@ -48,6 +48,7 @@ const Doacao = () => {
             window.open(value, 'newwindow', 'width=1000,height=600')
             return false
           }}
+          disabled={value === ''}
         >
           Doar
         </Button>
